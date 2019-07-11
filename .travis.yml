@@ -1,8 +1,33 @@
-language: cpp
+# List of elvm Backends to build and test
+#
+# @param $FULL iff 1, a full test will be performend in addition to a simple
+#     build
+# @param $SELFHOST iff 1, a self hosting test will be performed in addition to
+#     a simple build
+#
+# Some targets will not perform a full test or self hosting test even if they
+# don't fail since those tests might exceed Travis CI's time limit
+env:
+  matrix:
+    - TARGET='rb'	FULL=1	SELFHOST=0
+    - TARGET='x86'	FULL=1	SELFHOST=1
 
-compiler:
-  - clang
 
+# Build target and execute as many tests as possible, restricted by Travis CI
+# runtime limit
 script:
-  - make -j4 rb elc-rb
-  - tools/check_selfhost.sh x86
+  - mc $TARGET make $TARGET
+  - if [ $FULL == '1' ]; then mc $TARGET make test-$TARGET-full; fi
+  - if [ $SELFHOST == '1' ]; then mc $TARGET ./tools/check_selfhost.sh $TARGET; fi
+
+
+# Install target specific environment in Docker container
+install:
+ - npm install -g mini-cross
+ - mc $TARGET echo $TARGET
+
+language: node_js
+
+services:
+ - docker
+
