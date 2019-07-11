@@ -9,6 +9,7 @@
 # don't fail since those tests might exceed Travis CI's time limit
 env:
   matrix:
+    - TARGET='asmjs'	FULL=1	SELFHOST=0
     - TARGET='bf'	FULL=1	SELFHOST=0
     - TARGET='rb'	FULL=1	SELFHOST=0
     - TARGET='x86'	FULL=1	SELFHOST=1
