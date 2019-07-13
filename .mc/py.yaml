@@ -11,3 +11,8 @@ install:
  # Backend py
  - python3
 ---
+#!/bin/bash
+
+
+sudo ln -s `which python3` '/usr/local/bin/python'
+
