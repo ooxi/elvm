@@ -19,9 +19,10 @@ env:
 # Build target and execute as many tests as possible, restricted by Travis CI
 # runtime limit
 script:
-  - mc $TARGET make $TARGET
-  - if [ $FULL == '1' ]; then mc $TARGET make test-$TARGET-full; fi
-  - if [ $SELFHOST == '1' ]; then mc $TARGET ./tools/check_selfhost.sh $TARGET; fi
+  - mc $TARGET make build-$TARGET
+  - if [ $TEST == '1' ]; then mc $TARGET make test-$TARGET; fi
+  - if [ $TEST_FULL == '1' ]; then mc $TARGET make test-$TARGET-full; fi
+  - if [ $TEST_SELFHOST == '1' ]; then mc $TARGET ./tools/check_selfhost.sh $TARGET; fi
 
 
 # Install target specific environment in Docker container
