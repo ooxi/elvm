@@ -11,5 +11,6 @@ install:
  - which
 
  # Backend wasm
+ - nodejs
  - wabt
 ---
