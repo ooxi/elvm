@@ -9,8 +9,7 @@ if which dotnet; then
     if [ ! -e project.json ]; then
         dotnet new console
         dotnet restore
-#    fi > /dev/null
-    fi
+    fi > /dev/null
 
     mv Program1.cs Program.cs
 
