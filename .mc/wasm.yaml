@@ -9,5 +9,4 @@ install:
  - ruby
 
  # Backend wasm
- - wabt
 ---
