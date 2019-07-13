@@ -8,7 +8,8 @@ if [ -x "$(command -v dotnet)" ]; then
     cd $1_dir
     if [ ! -e project.json ]; then
         dotnet new --language fsharp
-    fi > /dev/null
+#    fi > /dev/null
+    fi
 
     mv Program1.fs Program.fs
 
