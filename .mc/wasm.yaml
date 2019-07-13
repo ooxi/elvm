@@ -1,12 +1,15 @@
 ---
-base: ubuntu:18.04
+base: fedora:30
 install:
 
  # Common
- - g++
+ - gcc
+ - gcc-c++
  - git
  - make
  - ruby
+ - which
 
  # Backend wasm
+ - wabt
 ---
