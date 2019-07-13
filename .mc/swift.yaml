@@ -11,6 +11,11 @@ install:
  - which
 
  # Backend swift
- - swift
+ - yaourt
 ---
+#!/bin/bash
+
+
+sudo yaourt -Syy
+sudo yaourt -S swift
 
