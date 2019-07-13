@@ -7,7 +7,7 @@ if which dotnet; then
     cp $1 $1_dir/Program1.cs
     cd $1_dir
     if [ ! -e project.json ]; then
-        dotnet new
+        dotnet new console
         dotnet restore
 #    fi > /dev/null
     fi
