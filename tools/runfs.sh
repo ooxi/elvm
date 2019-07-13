@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
-if which dotnet; then
+if [ -x "$(command -v dotnet)" ]; then
     mkdir -p $1_dir
     cp $1 $1_dir/Program1.fs
     cd $1_dir
     if [ ! -e project.json ]; then
-        dotnet new -l fsharp
+        dotnet new --language fsharp
     fi > /dev/null
 
     mv Program1.fs Program.fs
