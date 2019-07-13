@@ -14,3 +14,8 @@ install:
  - nodejs
  - wabt
 ---
+#!/bin/bash
+
+
+sudo ln -s `which node` '/usr/local/bin/nodejs'
+
