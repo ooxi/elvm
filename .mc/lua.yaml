@@ -11,3 +11,8 @@ install:
  # Backend lua
  - lua5.3
 ---
+#!/bin/bash
+
+
+sudo ln -s '/usr/bin/lua5.3' '/usr/local/bin/lua'
+
