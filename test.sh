@@ -3,6 +3,7 @@
 set -e
 
 mc $1 make -C8cc clean
+mc $1 make -CWhitespace clean
 mc $1 rm -rf 'out'
 mc $1 make build-$1
 mc $1 make test-$1
