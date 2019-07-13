@@ -8,5 +8,12 @@ install:
  - make
  - ruby
 
- # Backend x86
+ # Backend swift
+ - curl
 ---
+#!/bin/bash
+
+
+# @see https://swift.org/download/#using-downloads
+TOOLCHAIN_URL='https://swift.org/builds/swift-5.0.1-release/ubuntu1804/swift-5.0.1-RELEASE/swift-5.0.1-RELEASE-ubuntu18.04.tar.gz'
+
