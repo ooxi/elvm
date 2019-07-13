@@ -9,10 +9,11 @@
 # don't fail since those tests might exceed Travis CI's time limit
 env:
   matrix:
-    - TARGET='asmjs'	FULL=1	SELFHOST=0
-    - TARGET='bf'	FULL=1	SELFHOST=0
-    - TARGET='rb'	FULL=1	SELFHOST=0
-    - TARGET='x86'	FULL=1	SELFHOST=1
+    - TEST=1 TEST_FULL=1 TEST_SELFHOST=0 TARGET='asmjs'
+    - TEST=1 TEST_FULL=1 TEST_SELFHOST=0 TARGET='bef'
+    - TEST=1 TEST_FULL=1 TEST_SELFHOST=0 TARGET='bf'
+    - TEST=1 TEST_FULL=1 TEST_SELFHOST=0 TARGET='rb'
+    - TEST=1 TEST_FULL=1 TEST_SELFHOST=1 TARGET='x86'
 
 
 # Build target and execute as many tests as possible, restricted by Travis CI
