@@ -8,7 +8,7 @@ install:
  - make
  - ruby
 
- # Backend cs
+ # Backend fs
  - software-properties-common
  - wget
 ---
