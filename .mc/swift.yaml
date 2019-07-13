@@ -10,7 +10,7 @@ install:
  - ruby
  - which
 
- # Backend cr
- - crystal
+ # Backend swift
+ - swift
 ---
 
