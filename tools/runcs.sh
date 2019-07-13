@@ -2,7 +2,7 @@
 
 set -e
 
-if [ -x "$(command -v foo)" ]; then
+if [ -x "$(command -v dotnet)" ]; then
     mkdir -p $1_dir
     cp $1 $1_dir/Program1.cs
     cd $1_dir
