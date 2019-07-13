@@ -9,6 +9,7 @@
 # don't fail since those tests might exceed Travis CI's time limit
 env:
   matrix:
+    - TEST=1 TEST_FULL=1 TEST_SELFHOST=0 TARGET='arm'
     - TEST=1 TEST_FULL=1 TEST_SELFHOST=0 TARGET='asmjs'
     - TEST=1 TEST_FULL=0 TEST_SELFHOST=0 TARGET='bef'
     - TEST=1 TEST_FULL=1 TEST_SELFHOST=0 TARGET='bf'
