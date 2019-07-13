@@ -9,5 +9,5 @@ install:
  - ruby
 
  # Backend lua
- - lua-any
+ - lua5.3
 ---
