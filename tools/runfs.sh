@@ -7,7 +7,7 @@ if [ -x "$(command -v dotnet)" ]; then
     cp $1 $1_dir/Program1.fs
     cd $1_dir
     if [ ! -e project.json ]; then
-        dotnet new --language fsharp
+        dotnet new console --language 'F#' --force
 #    fi > /dev/null
     fi
 
