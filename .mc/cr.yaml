@@ -3,6 +3,7 @@ base: archlinux/base
 install:
 
  # Common
+ - bsdiff
  - gcc
  - git
  - make
