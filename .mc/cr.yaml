@@ -1,5 +1,5 @@
 ---
-base: ubuntu:18.04
+base: archlinux/base
 install:
 
  # Common
@@ -9,10 +9,6 @@ install:
  - ruby
 
  # Backend cr
- - curl
+ - crystal
 ---
-#!/bin/bash
-
-
-#curl -sSL https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 
