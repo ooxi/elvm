@@ -8,11 +8,11 @@ if [ -x "$(command -v dotnet)" ]; then
     cd $1_dir
     if [ ! -e project.json ]; then
         dotnet new console --language 'F#' --force
+        dotnet restore
     fi > /dev/null
 
     mv Program1.fs Program.fs
 
-    dotnet restore > /dev/null
     dotnet build > /dev/null
     dotnet bin/Debug/*/*.dll
 else
