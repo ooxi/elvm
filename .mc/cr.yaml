@@ -3,10 +3,10 @@ base: archlinux/base
 install:
 
  # Common
-# - g++
-# - git
-# - make
-# - ruby
+ - gcc
+ - git
+ - make
+ - ruby
 
  # Backend cr
  - crystal
