@@ -7,7 +7,7 @@ if [ -x "$(command -v dotnet)" ]; then
     cp $1 $1_dir/Program1.cs
     cd $1_dir
     if [ ! -e project.json ]; then
-        dotnet --force new console
+        dotnet new --force console
         dotnet restore
     fi > /dev/null
 
