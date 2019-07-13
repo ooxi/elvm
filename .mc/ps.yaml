@@ -9,4 +9,5 @@ install:
  - ruby
 
  # Backend ps
+ - ghostscript
 ---
