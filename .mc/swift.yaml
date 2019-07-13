@@ -1,21 +1,12 @@
 ---
-base: archlinux/base
+base: ubuntu:18.04
 install:
 
  # Common
- - bsdiff
- - gcc
+ - g++
  - git
  - make
  - ruby
- - which
 
- # Backend swift
- - yaourt
+ # Backend x86
 ---
-#!/bin/bash
-
-
-sudo yaourt -Syy
-sudo yaourt -S swift
-
