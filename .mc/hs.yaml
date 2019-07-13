@@ -8,5 +8,5 @@ install:
  - make
  - ruby
 
- # Backend x86
+ # Backend hs
 ---
