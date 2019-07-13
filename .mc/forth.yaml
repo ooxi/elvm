@@ -8,5 +8,6 @@ install:
  - make
  - ruby
 
- # Backend x86
+ # Backend forth
+ - gforth
 ---
