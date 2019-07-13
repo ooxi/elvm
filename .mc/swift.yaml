@@ -10,6 +10,7 @@ install:
 
  # Backend swift
  - curl
+ - libxml2
  - tar
 ---
 #!/bin/bash
