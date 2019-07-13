@@ -1,9 +1,9 @@
 # List of elvm Backends to build and test
 #
-# @param $FULL iff 1, a full test will be performend in addition to a simple
-#     build
-# @param $SELFHOST iff 1, a self hosting test will be performed in addition to
+# @param $TEST iff 1, a couple of basic tests will be performed in addition to
 #     a simple build
+# @param $TEST_FULL iff 1, a full test will be performend
+# @param $TEST_SELFHOST iff 1, a self hosting test will be performed
 #
 # Some targets will not perform a full test or self hosting test even if they
 # don't fail since those tests might exceed Travis CI's time limit
