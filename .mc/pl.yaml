@@ -9,5 +9,5 @@ install:
  - ruby
 
  # Backend pl
- - pl
+ - perl
 ---
